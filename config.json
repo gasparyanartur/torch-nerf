@@ -1,0 +1,9 @@
+{
+    "root_data_path": "data",
+    "data_name": "NeRF_Data",
+    "data_name_7z": "nerf-data.7z",
+    "data_id": "1K9SpgRYAMfZT-Qe1cLoB3x8wevdRYzFD",
+    "dataset_names": [
+        "nerf_synthetic"
+    ]
+}
