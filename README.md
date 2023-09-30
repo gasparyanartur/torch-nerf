@@ -14,11 +14,11 @@ Contact: <gasparyanartur99@gmail.com>
 
 3. Setup the Conda environment
 
-`conda env create -f environment.yml -p ./env-nerf`
+`conda env create -f environment.yml`
 
 4. Activate the environment
 
-`conda activate ./env-nerf`
+`conda activate env-nerf`
 
 5. Install the python packages
 
