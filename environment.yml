@@ -2,8 +2,13 @@ name: env-nerf
 channels:
   - conda-forge
   - pytorch
+  - anaconda
   - defaults
 dependencies:
   - python=3.11.4
   - pytorch-lightning
   - pytorch
+  - torchvision
+  - ipykernel
+  - matplotlib
+  - numpy
