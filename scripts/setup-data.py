@@ -56,7 +56,7 @@ def setup_data(configs: dict[str, any]) -> None:
         else:
             logging.info(f"Downloading file with id {data_id} to path {data_path}...")
 
-            downloaded = gdown.download(id=data_id, output=str(data_path))
+            downloaded = gdown.download(id=data_id, output=str(data_path_7z))
             if not downloaded:
                 raise ValueError(f"Failed to get data - Download failed")
 
