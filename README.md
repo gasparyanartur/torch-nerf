@@ -1,6 +1,10 @@
 # torch-nerf
 
-Contact: <gasparyanartur99@gmail.com>
+Contact:
+
+<gasparyanartur99@gmail.com> 
+
+<linus_haraldsson@hotmail.com>
 
 ## Setup
 
