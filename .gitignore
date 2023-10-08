@@ -1,2 +1,4 @@
 data/*
 env-nerf
+*/__pycache__
+lightning_logs
