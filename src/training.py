@@ -1,8 +1,8 @@
 import torch
 from torch import nn
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-
-def expected_color(c, sigma, dt):
+def expected_color(c: torch.Tensor, sigma: torch.Tensor, dt: torch.Tensor) -> torch.Tensor:
     # c: <B, N, 3>
     # sigma: <B, NS>
     # delta: <B, NR, NB>
@@ -27,7 +27,7 @@ def expected_color(c, sigma, dt):
     # Compute cumuluative probability,
     # Since equation (3) sums T_i from i=1 to i-1, we set the first value to (exp 0 = 1) and ignore the last value
     T = torch.exp(-torch.cumsum(mul, dim=-1))
-    T = torch.cat((torch.ones(B, NR, 1), T), dim=-1)[..., :-1]
+    T = torch.cat((torch.ones(B, NR, 1,device=DEVICE), T), dim=-1)[..., :-1]
 
     # Since we do no have a delta for the last value,
     # we directly set the last value of w to T at i=N,
@@ -48,7 +48,7 @@ def positional_encoding(p: torch.Tensor, L: int) -> torch.Tensor:
     # Z denotes transformed input p
     # Z_ij becomes 2^i * p_i * p_j for each i in 0..L-1 and each component j in 1..3
     # Thus dimension is <B, D, L>
-    z = (2 ** torch.arange(L).repeat(D, 1)) * (torch.pi * p[..., None])
+    z = (2 ** torch.arange(L,device=DEVICE).repeat(D, 1)) * (torch.pi * p[..., None])
 
     # X denotes the encoded value for each transformed input
     x1 = torch.sin(z)
@@ -64,7 +64,7 @@ def positional_encoding(p: torch.Tensor, L: int) -> torch.Tensor:
 
 
 def strat_sampling(N: int, t_near: float, t_far: float) -> torch.Tensor:
-    samples = (torch.arange(N) + torch.rand(N)) * (t_far - t_near) / N  # <N>
+    samples = (torch.arange(N,device=DEVICE) + torch.rand(N,device=DEVICE)) * (t_far - t_near) / N  # <N>
     return samples
 
 
