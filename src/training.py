@@ -87,26 +87,29 @@ class LitNerf(ptl.LightningModule):
         n_bins,
         t_near,
         t_far,
+        n_chunks,
         L1,
-        L2,
+        L2,  
         learning_rate: float = 3e-4,
     ):
         super().__init__()
         self.scene_model = scene_model
         self.criterion = nn.MSELoss()
         self.learning_rate = learning_rate
-        self.n_rays = n_rays
+        self.n_rays = n_rays                #TODO is good???? chunks be annoying
         self.n_bins = n_bins
         self.t_near = t_near
         self.t_far = t_far
+        self.n_chunks = n_chunks
         self.L1 = L1
         self.L2 = L2
 
-    def training_step(self, batch, batch_idx):
+    def batch_to_samples(self, batch):
         r_o, r_d, C_r = batch
 
+        num_rays = r_o.shape[1]**2
         B = r_o.size(0)
-        t, dt = get_t(B, self.n_rays, self.n_bins, self.t_near, self.t_far)
+        t, dt = get_t(B, num_rays, self.n_bins, self.t_near, self.t_far)
 
         r_d = nn.functional.normalize(r_d, dim=-1)
 
@@ -118,13 +121,34 @@ class LitNerf(ptl.LightningModule):
         C_r = C_r[:, :3].reshape(B, 3, -1).swapaxes(1, 2)
 
         x = r_o + t * r_d
+
         ex = positional_encoding(x, self.L1)
         ed = positional_encoding(r_d, self.L2)
 
-        c, sigma = self.scene_model(ex, ed)
-        c_hat = expected_color(c, sigma, dt)
+        return ex, ed, C_r, dt,
 
-        loss = self.criterion(c_hat, C_r)
+
+    def training_step(self, batch, batch_idx):
+        assert batch[0].shape[1]%self.n_chunks == 0     # img dimension divissible by num chunks, expecting square img #TODO detta ska va nån annan stanns
+
+        r_o, r_d, C_r = batch
+        step = batch[0].shape[1]//self.n_chunks
+        loss = 0
+        
+
+        for i in range(self.n_chunks):
+            for j in range(self.n_chunks):
+
+                r_o = batch[0][...,i:i+step,j:j+step,:]
+                r_d = batch[1][...,i:i+step,j:j+step,:]
+                C_r = batch[2][...,i:i+step,j:j+step]
+
+                ex, ed, C_r, dt, = self.batch_to_samples([r_o,r_d,C_r])
+
+                c, sigma = self.scene_model(ex, ed)
+                c_hat = expected_color(c, sigma, dt)
+
+                loss += self.criterion(c_hat, C_r)
 
         self.log("train_loss", loss, prog_bar=True)
 
