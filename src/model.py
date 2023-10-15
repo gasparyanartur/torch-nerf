@@ -3,8 +3,10 @@ from torch import nn
 
 
 class TestNet(nn.Module):
-    def __init__(self, L1, L2, n_components, n_hidden):
+    def __init__(self, name: str, L1, L2, n_components, n_hidden):
         super().__init__()
+
+        self.name = name
 
         self.d1 = n_components * 2 * L1
         self.d2 = n_components * 2 * L2
@@ -34,8 +36,10 @@ class TestNet(nn.Module):
 
 
 class MediumNet(nn.Module):
-    def __init__(self, L1, L2, n_components, n_hidden):
+    def __init__(self, name: str, L1, L2, n_components, n_hidden):
         super().__init__()
+
+        self.name = name
 
         self.d1 = n_components * 2 * L1
         self.d2 = n_components * 2 * L2
@@ -77,8 +81,3 @@ class MediumNet(nn.Module):
         rgb = nn.functional.sigmoid(rgb)
 
         return rgb, sigma
-
-
-class NeRFnet(nn.Module):
-    def __init__(self, L1, L2, n_components, n_hidden):
-        super().__init__()

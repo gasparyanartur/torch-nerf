@@ -67,6 +67,7 @@ def positional_encoding(p: torch.Tensor, L: int) -> torch.Tensor:
     return x
 
 
+@torch.jit.script
 def strat_sampling(N: int, t_near: float, t_far: float) -> torch.Tensor:
     samples = (
         (torch.arange(N, device=DEVICE) + torch.rand(N, device=DEVICE))
