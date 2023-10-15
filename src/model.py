@@ -32,6 +32,7 @@ class TestNet(nn.Module):
 
         return rgb, sigma
 
+
 class MediumNet(nn.Module):
     def __init__(self, L1, L2, n_components, n_hidden):
         super().__init__()
@@ -43,11 +44,13 @@ class MediumNet(nn.Module):
         self.lin1 = nn.Linear(self.d1, n_hidden)
         self.lin2 = nn.Linear(n_hidden, n_hidden)
         self.lin3 = nn.Linear(n_hidden, n_hidden)
-        self.lin4 = nn.Linear(n_hidden , n_hidden+1)     
-        self.lin5 = nn.Linear(n_hidden + self.d2, n_hidden//2)
-        self.lin6 = nn.Linear(n_hidden//2 , 3)
+        self.lin4 = nn.Linear(n_hidden, n_hidden + 1)
+        self.lin5 = nn.Linear(n_hidden + self.d2, n_hidden // 2)
+        self.lin6 = nn.Linear(n_hidden // 2, 3)
 
-    def forward(self, o: torch.Tensor, d: torch.Tensor) -> torch.Tensor:
+    def forward(
+        self, o: torch.Tensor, d: torch.Tensor
+    ) -> tuple[torch.Tensor, torch.Tensor]:
         # o: <B, NS, D*2*L>
         # d: <B, NS, D*2*L>
         assert len(o.shape) == 3
@@ -60,7 +63,7 @@ class MediumNet(nn.Module):
         x = self.lin2(x)
         x = nn.functional.relu(x)
         x = self.lin3(x)
-        x = nn.functional.relu(x)        
+        x = nn.functional.relu(x)
         x = self.lin4(x)
 
         # no activation func according to paper
@@ -74,9 +77,8 @@ class MediumNet(nn.Module):
         rgb = nn.functional.sigmoid(rgb)
 
         return rgb, sigma
-    
+
+
 class NeRFnet(nn.Module):
     def __init__(self, L1, L2, n_components, n_hidden):
         super().__init__()
-
-

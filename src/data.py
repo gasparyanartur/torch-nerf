@@ -56,11 +56,16 @@ def load_frame(
     rotations: list[float],
     tf_matrixes: list[torch.FloatTensor],
     idx: int,
+    downsample_factor: int = 1,
 ) -> tuple[torch.Tensor, float, torch.Tensor]:
     img_path = imgs_path[idx]
     rotation = rotations[idx]
     tf_matrix = tf_matrixes[idx]
     img = io.read_image(str(img_path), mode=io.ImageReadMode.RGB_ALPHA)
+
+    if downsample_factor > 1:
+        C, H, W = img.shape
+        img = transforms.Resize((H//downsample_factor, W//downsample_factor), antialias=True)(img)
 
     return img, rotation, tf_matrix
 
@@ -90,6 +95,7 @@ class FrameDataset(Dataset):
         data_path: pl.Path,
         data_mode: str,  # 'train', 'val', 'test'
         ex_idx: int = 5,
+        downsample_factor: int = 1,
     ) -> None:
         super().__init__()
 
@@ -100,6 +106,7 @@ class FrameDataset(Dataset):
             self.tfs_path
         )
         self.img_paths = load_img_paths(self.imgs_path)
+        self.downsample_factor = downsample_factor
 
         self.ex_img, *_ = self[ex_idx]
         self.C, self.H, self.W = self.ex_img.shape
@@ -115,7 +122,11 @@ class FrameDataset(Dataset):
 
     def __getitem__(self, idx: int) -> tuple[torch.Tensor, float, torch.Tensor]:
         img, rot, c2w = load_frame(
-            self.img_paths, self.rotations, self.transform_matrixes, idx
+            self.img_paths,
+            self.rotations,
+            self.transform_matrixes,
+            idx,
+            downsample_factor=self.downsample_factor,
         )
         return img, rot, c2w
 
