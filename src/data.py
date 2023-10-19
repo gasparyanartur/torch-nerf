@@ -12,7 +12,7 @@ from torchvision import io
 from torchvision import transforms
 import json
 
-digit_pattern = re.compile(r"\d+")
+rgb_digit_pattern = re.compile("r_(?P<digit>\d+).png")
 
 
 def load_transforms(
@@ -36,19 +36,27 @@ def load_transforms(
     return cam_angle_x, rotations, transform_matrixes
 
 
-def extract_digit_from_path_name(path: pl.Path) -> int:
-    match = digit_pattern.search(path.name)
+def extract_digit_from_path_name(path: pl.Path, pattern: re.Pattern) -> int:
+    match = pattern.match(path.name)
 
     if not match:
         return None
 
-    return int(match.group(0))
+    return int(match.groupdict()["digit"])
 
 
-def load_img_paths(imgs_path: pl.Path):
-    paths = imgs_path.iterdir()  # Ordered lexagraphically
-    paths = sorted(paths, key=extract_digit_from_path_name)  # Ordered numerically
-    return paths
+def load_img_paths(imgs_path: pl.Path) -> list[pl.Path]:
+    # Ordered lexagraphically, rearrange to numberical ordering
+    digit_path_pairs = []
+    for path in imgs_path.iterdir():
+        name_match = rgb_digit_pattern.match(path.name)
+        if not name_match:
+            continue
+
+        digit = int(name_match.groupdict()["digit"])
+        digit_path_pairs.append((digit, path))
+
+    return [path for _, path in sorted(digit_path_pairs)]
 
 
 def load_frame(
@@ -61,11 +69,13 @@ def load_frame(
     img_path = imgs_path[idx]
     rotation = rotations[idx]
     tf_matrix = tf_matrixes[idx]
-    img = io.read_image(str(img_path), mode=io.ImageReadMode.RGB_ALPHA)
+    img = io.read_image(str(img_path), mode=io.ImageReadMode.RGB_ALPHA) / 255.0
 
     if downsample_factor > 1:
         C, H, W = img.shape
-        img = transforms.Resize((H//downsample_factor, W//downsample_factor), antialias=True)(img)
+        img = transforms.Resize(
+            (H // downsample_factor, W // downsample_factor), antialias=True
+        )(img)
 
     return img, rotation, tf_matrix
 
@@ -142,7 +152,6 @@ class RayDataset(Dataset):
 
     def __getitem__(self, idx: int) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
         C_r, _, c2w = self.frame_dataset[idx]
-        C_r = C_r / 255.0
 
         focal = self.frame_dataset.focal
         H, W = self.frame_dataset.shape

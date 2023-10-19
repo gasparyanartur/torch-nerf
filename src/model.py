@@ -8,13 +8,15 @@ class TestNet(nn.Module):
 
         self.name = name
 
-        self.d1 = n_components * 2 * L1
-        self.d2 = n_components * 2 * L2
+        self.d1 = n_components * 2 * L1 + n_components
+        self.d2 = n_components * 2 * L2 + n_components
 
         self.lin1 = nn.Linear(self.d1, n_hidden + 1)
         self.lin2 = nn.Linear(n_hidden + self.d2, 3)
 
-    def forward(self, o: torch.Tensor, d: torch.Tensor) -> torch.Tensor:
+    def forward(
+        self, o: torch.Tensor, d: torch.Tensor
+    ) -> tuple[torch.Tensor, torch.Tensor]:
         # o: <B, NS, D*2*L>
         # d: <B, NS, D*2*L>
         assert len(o.shape) == 3
@@ -41,8 +43,8 @@ class MediumNet(nn.Module):
 
         self.name = name
 
-        self.d1 = n_components * 2 * L1
-        self.d2 = n_components * 2 * L2
+        self.d1 = n_components * 2 * L1 + n_components
+        self.d2 = n_components * 2 * L2 + n_components
         self.l5 = n_hidden + self.d2
 
         self.lin1 = nn.Linear(self.d1, n_hidden)
@@ -79,5 +81,69 @@ class MediumNet(nn.Module):
 
         sigma = nn.functional.relu(sigma)
         rgb = nn.functional.sigmoid(rgb)
+
+        return rgb, sigma
+
+
+class LargeNetNoView(nn.Module):
+    def __init__(self, name: str, L1, L2, n_components, n_hidden, act_func=nn.ReLU):
+        super().__init__()
+
+        self.name = name
+
+        self.d1 = n_components * 2 * L1 + n_components
+        self.d2 = n_components * 2 * L2 + n_components
+        self.l5 = n_hidden + self.d2
+
+        self.lin1 = nn.Linear(self.d1, n_hidden)
+        self.pre_stack = nn.Sequential(
+            nn.Linear(self.d1, n_hidden),
+            act_func(),
+            nn.Linear(n_hidden, n_hidden),
+            act_func(),
+            nn.Linear(n_hidden, n_hidden),
+            act_func(),
+            nn.Linear(n_hidden, n_hidden),
+            act_func(),
+        )
+
+        self.post_stack = nn.Sequential(
+            nn.Linear(n_hidden + self.d1, n_hidden),
+            act_func(),
+            nn.Linear(n_hidden, n_hidden),
+            act_func(),
+            nn.Linear(n_hidden, n_hidden),
+            act_func(),
+            nn.Linear(n_hidden, n_hidden),
+            act_func(),
+            nn.Linear(n_hidden, n_hidden + 1),
+        )
+
+        self.final_stack = nn.Sequential(
+            nn.Linear(n_hidden + self.d2, n_hidden // 2),
+            act_func(),
+            nn.Linear(n_hidden // 2, 3),
+        )
+
+    def forward(
+        self, o: torch.Tensor, d: torch.Tensor
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        # o: <B, NS, D*2*L>
+        # d: <B, NS, D*2*L>
+        assert len(o.shape) == 3
+        assert len(d.shape) == 3
+        assert o.size(2) == self.d1
+        assert d.size(2) == self.d2
+
+        x = self.pre_stack(o)
+        x = torch.cat((o, x), dim=-1)
+        x = self.post_stack(x)
+
+        sigma = x[..., 0]
+        x = torch.cat((d, x[..., 1:]), dim=-1)
+        rgb = self.final_stack(x)
+
+        sigma = nn.functional.relu(sigma)  # <B, NS>
+        rgb = nn.functional.sigmoid(rgb)  # <B, NS, 3>
 
         return rgb, sigma
