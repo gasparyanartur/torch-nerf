@@ -10,6 +10,7 @@ dependencies:
   - python=3.11.4
   - pytorch-lightning
   - torchvision
+  - torchmetrics
   - ipykernel
   - matplotlib
   - numpy
