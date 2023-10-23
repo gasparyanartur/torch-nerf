@@ -1,0 +1,804 @@
+
+==================================================
+Epoch: 0 / 1321
+Duration / Epoch: 0.223
+Train loss: 1.74037e-01
+Train loss - RGB: 1.74037e-01
+Train loss - Segmentation: 6.93048e-01
+Ref loss: 1.70058e-01
+Ref loss - RGB: 1.70058e-01
+Ref loss - Segmentation: 6.97787e-01
+Mean outout: 0.46953
+
+
+==================================================
+Epoch: 20 / 1321
+Duration / Epoch: 1.611
+Train loss: 4.15988e-02
+Train loss - RGB: 4.15988e-02
+Train loss - Segmentation: 6.74662e-01
+Ref loss: 7.73614e-02
+Ref loss - RGB: 7.73614e-02
+Ref loss - Segmentation: 6.80041e-01
+Mean outout: 0.10050
+
+
+==================================================
+Epoch: 40 / 1321
+Duration / Epoch: 1.573
+Train loss: 7.91584e-02
+Train loss - RGB: 7.91584e-02
+Train loss - Segmentation: 6.62211e-01
+Ref loss: 7.59013e-02
+Ref loss - RGB: 7.59013e-02
+Ref loss - Segmentation: 6.78012e-01
+Mean outout: 0.17904
+
+
+==================================================
+Epoch: 60 / 1321
+Duration / Epoch: 1.529
+Train loss: 6.12326e-02
+Train loss - RGB: 6.12326e-02
+Train loss - Segmentation: 5.07423e-01
+Ref loss: 3.59663e-02
+Ref loss - RGB: 3.59663e-02
+Ref loss - Segmentation: 5.21189e-01
+Mean outout: 0.06348
+
+
+==================================================
+Epoch: 80 / 1321
+Duration / Epoch: 1.523
+Train loss: 1.38967e-02
+Train loss - RGB: 1.38967e-02
+Train loss - Segmentation: 3.88923e-01
+Ref loss: 3.00871e-02
+Ref loss - RGB: 3.00871e-02
+Ref loss - Segmentation: 4.38566e-01
+Mean outout: 0.10980
+
+
+==================================================
+Epoch: 100 / 1321
+Duration / Epoch: 1.527
+Train loss: 2.11567e-02
+Train loss - RGB: 2.11567e-02
+Train loss - Segmentation: 3.87136e-01
+Ref loss: 2.38132e-02
+Ref loss - RGB: 2.38132e-02
+Ref loss - Segmentation: 4.27064e-01
+Mean outout: 0.15832
+
+
+==================================================
+Epoch: 120 / 1321
+Duration / Epoch: 1.654
+Train loss: 1.79063e-02
+Train loss - RGB: 1.79063e-02
+Train loss - Segmentation: 3.88204e-01
+Ref loss: 1.62658e-02
+Ref loss - RGB: 1.62658e-02
+Ref loss - Segmentation: 4.27442e-01
+Mean outout: 0.12824
+
+
+==================================================
+Epoch: 140 / 1321
+Duration / Epoch: 1.712
+Train loss: 1.34526e-02
+Train loss - RGB: 1.34526e-02
+Train loss - Segmentation: 3.84710e-01
+Ref loss: 1.67142e-02
+Ref loss - RGB: 1.67142e-02
+Ref loss - Segmentation: 4.19085e-01
+Mean outout: 0.11236
+
+
+==================================================
+Epoch: 160 / 1321
+Duration / Epoch: 1.676
+Train loss: 1.74856e-02
+Train loss - RGB: 1.74856e-02
+Train loss - Segmentation: 4.31070e-01
+Ref loss: 1.38820e-02
+Ref loss - RGB: 1.38820e-02
+Ref loss - Segmentation: 4.28889e-01
+Mean outout: 0.18962
+
+
+==================================================
+Epoch: 180 / 1321
+Duration / Epoch: 1.729
+Train loss: 1.21583e-02
+Train loss - RGB: 1.21583e-02
+Train loss - Segmentation: 3.82849e-01
+Ref loss: 1.21635e-02
+Ref loss - RGB: 1.21635e-02
+Ref loss - Segmentation: 4.32800e-01
+Mean outout: 0.15044
+
+
+==================================================
+Epoch: 200 / 1321
+Duration / Epoch: 1.610
+Train loss: 9.91541e-03
+Train loss - RGB: 9.91541e-03
+Train loss - Segmentation: 3.42946e-01
+Ref loss: 1.05279e-02
+Ref loss - RGB: 1.05279e-02
+Ref loss - Segmentation: 4.11769e-01
+Mean outout: 0.16023
+
+
+==================================================
+Epoch: 220 / 1321
+Duration / Epoch: 1.686
+Train loss: 1.12513e-02
+Train loss - RGB: 1.12513e-02
+Train loss - Segmentation: 3.77365e-01
+Ref loss: 1.08917e-02
+Ref loss - RGB: 1.08917e-02
+Ref loss - Segmentation: 4.24605e-01
+Mean outout: 0.17866
+
+
+==================================================
+Epoch: 240 / 1321
+Duration / Epoch: 1.695
+Train loss: 6.14048e-03
+Train loss - RGB: 6.14048e-03
+Train loss - Segmentation: 3.29533e-01
+Ref loss: 1.00472e-02
+Ref loss - RGB: 1.00472e-02
+Ref loss - Segmentation: 4.15191e-01
+Mean outout: 0.06408
+
+
+==================================================
+Epoch: 260 / 1321
+Duration / Epoch: 1.660
+Train loss: 1.22235e-02
+Train loss - RGB: 1.22235e-02
+Train loss - Segmentation: 3.50146e-01
+Ref loss: 9.71365e-03
+Ref loss - RGB: 9.71365e-03
+Ref loss - Segmentation: 4.15760e-01
+Mean outout: 0.09509
+
+
+==================================================
+Epoch: 280 / 1321
+Duration / Epoch: 1.621
+Train loss: 3.59090e-03
+Train loss - RGB: 3.59090e-03
+Train loss - Segmentation: 2.62507e-01
+Ref loss: 9.52996e-03
+Ref loss - RGB: 9.52996e-03
+Ref loss - Segmentation: 4.29359e-01
+Mean outout: 0.06681
+
+
+==================================================
+Epoch: 300 / 1321
+Duration / Epoch: 1.650
+Train loss: 9.95094e-03
+Train loss - RGB: 9.95094e-03
+Train loss - Segmentation: 4.29220e-01
+Ref loss: 8.86077e-03
+Ref loss - RGB: 8.86077e-03
+Ref loss - Segmentation: 4.13076e-01
+Mean outout: 0.19832
+
+
+==================================================
+Epoch: 320 / 1321
+Duration / Epoch: 2.200
+Train loss: 7.08406e-03
+Train loss - RGB: 7.08406e-03
+Train loss - Segmentation: 3.02981e-01
+Ref loss: 8.92060e-03
+Ref loss - RGB: 8.92060e-03
+Ref loss - Segmentation: 4.21896e-01
+Mean outout: 0.07531
+
+
+==================================================
+Epoch: 340 / 1321
+Duration / Epoch: 2.239
+Train loss: 1.07911e-02
+Train loss - RGB: 1.07911e-02
+Train loss - Segmentation: 3.73704e-01
+Ref loss: 9.64474e-03
+Ref loss - RGB: 9.64474e-03
+Ref loss - Segmentation: 4.12455e-01
+Mean outout: 0.12338
+
+
+==================================================
+Epoch: 360 / 1321
+Duration / Epoch: 2.137
+Train loss: 6.13521e-03
+Train loss - RGB: 6.13521e-03
+Train loss - Segmentation: 3.74004e-01
+Ref loss: 9.39803e-03
+Ref loss - RGB: 9.39803e-03
+Ref loss - Segmentation: 4.32616e-01
+Mean outout: 0.08316
+
+
+==================================================
+Epoch: 380 / 1321
+Duration / Epoch: 2.097
+Train loss: 8.89683e-03
+Train loss - RGB: 8.89683e-03
+Train loss - Segmentation: 3.75916e-01
+Ref loss: 8.30523e-03
+Ref loss - RGB: 8.30523e-03
+Ref loss - Segmentation: 4.36489e-01
+Mean outout: 0.11246
+
+
+==================================================
+Epoch: 400 / 1321
+Duration / Epoch: 2.235
+Train loss: 7.58437e-03
+Train loss - RGB: 7.58437e-03
+Train loss - Segmentation: 3.87929e-01
+Ref loss: 9.17238e-03
+Ref loss - RGB: 9.17238e-03
+Ref loss - Segmentation: 4.21661e-01
+Mean outout: 0.19839
+
+
+==================================================
+Epoch: 420 / 1321
+Duration / Epoch: 2.038
+Train loss: 8.92233e-03
+Train loss - RGB: 8.92233e-03
+Train loss - Segmentation: 4.22671e-01
+Ref loss: 8.91720e-03
+Ref loss - RGB: 8.91720e-03
+Ref loss - Segmentation: 4.28463e-01
+Mean outout: 0.14925
+
+
+==================================================
+Epoch: 440 / 1321
+Duration / Epoch: 1.708
+Train loss: 7.52609e-03
+Train loss - RGB: 7.52609e-03
+Train loss - Segmentation: 3.94463e-01
+Ref loss: 7.84767e-03
+Ref loss - RGB: 7.84767e-03
+Ref loss - Segmentation: 4.25413e-01
+Mean outout: 0.19679
+
+
+==================================================
+Epoch: 460 / 1321
+Duration / Epoch: 1.793
+Train loss: 8.44222e-03
+Train loss - RGB: 8.44222e-03
+Train loss - Segmentation: 4.46253e-01
+Ref loss: 8.97756e-03
+Ref loss - RGB: 8.97756e-03
+Ref loss - Segmentation: 4.16120e-01
+Mean outout: 0.17674
+
+
+==================================================
+Epoch: 480 / 1321
+Duration / Epoch: 1.725
+Train loss: 6.98856e-03
+Train loss - RGB: 6.98856e-03
+Train loss - Segmentation: 3.57233e-01
+Ref loss: 7.36278e-03
+Ref loss - RGB: 7.36278e-03
+Ref loss - Segmentation: 4.29396e-01
+Mean outout: 0.16473
+
+
+==================================================
+Epoch: 500 / 1321
+Duration / Epoch: 1.711
+Train loss: 7.16327e-03
+Train loss - RGB: 7.16327e-03
+Train loss - Segmentation: 4.39895e-01
+Ref loss: 6.52626e-03
+Ref loss - RGB: 6.52626e-03
+Ref loss - Segmentation: 4.33747e-01
+Mean outout: 0.14127
+
+
+==================================================
+Epoch: 520 / 1321
+Duration / Epoch: 1.711
+Train loss: 6.71522e-03
+Train loss - RGB: 6.71522e-03
+Train loss - Segmentation: 3.84217e-01
+Ref loss: 6.96842e-03
+Ref loss - RGB: 6.96842e-03
+Ref loss - Segmentation: 4.45811e-01
+Mean outout: 0.14287
+
+
+==================================================
+Epoch: 540 / 1321
+Duration / Epoch: 1.707
+Train loss: 5.75742e-03
+Train loss - RGB: 5.75742e-03
+Train loss - Segmentation: 4.17245e-01
+Ref loss: 6.61156e-03
+Ref loss - RGB: 6.61156e-03
+Ref loss - Segmentation: 4.38127e-01
+Mean outout: 0.20527
+
+
+==================================================
+Epoch: 560 / 1321
+Duration / Epoch: 1.667
+Train loss: 9.53498e-03
+Train loss - RGB: 9.53498e-03
+Train loss - Segmentation: 4.43315e-01
+Ref loss: 7.27319e-03
+Ref loss - RGB: 7.27319e-03
+Ref loss - Segmentation: 4.96389e-01
+Mean outout: 0.18828
+
+
+==================================================
+Epoch: 580 / 1321
+Duration / Epoch: 1.643
+Train loss: 6.38227e-03
+Train loss - RGB: 6.38227e-03
+Train loss - Segmentation: 3.87261e-01
+Ref loss: 6.78031e-03
+Ref loss - RGB: 6.78031e-03
+Ref loss - Segmentation: 4.27219e-01
+Mean outout: 0.15070
+
+
+==================================================
+Epoch: 600 / 1321
+Duration / Epoch: 1.662
+Train loss: 6.34408e-03
+Train loss - RGB: 6.34408e-03
+Train loss - Segmentation: 3.47993e-01
+Ref loss: 5.48014e-03
+Ref loss - RGB: 5.48014e-03
+Ref loss - Segmentation: 4.40607e-01
+Mean outout: 0.14357
+
+
+==================================================
+Epoch: 620 / 1321
+Duration / Epoch: 1.667
+Train loss: 6.10102e-03
+Train loss - RGB: 6.10102e-03
+Train loss - Segmentation: 4.11397e-01
+Ref loss: 5.11678e-03
+Ref loss - RGB: 5.11678e-03
+Ref loss - Segmentation: 4.34327e-01
+Mean outout: 0.17078
+
+
+==================================================
+Epoch: 640 / 1321
+Duration / Epoch: 1.659
+Train loss: 4.79751e-03
+Train loss - RGB: 4.79751e-03
+Train loss - Segmentation: 4.36244e-01
+Ref loss: 4.48920e-03
+Ref loss - RGB: 4.48920e-03
+Ref loss - Segmentation: 4.28622e-01
+Mean outout: 0.16433
+
+
+==================================================
+Epoch: 660 / 1321
+Duration / Epoch: 1.618
+Train loss: 2.30151e-03
+Train loss - RGB: 2.30151e-03
+Train loss - Segmentation: 2.65978e-01
+Ref loss: 7.48050e-03
+Ref loss - RGB: 7.48050e-03
+Ref loss - Segmentation: 4.84924e-01
+Mean outout: 0.06545
+
+
+==================================================
+Epoch: 680 / 1321
+Duration / Epoch: 1.639
+Train loss: 4.47510e-03
+Train loss - RGB: 4.47510e-03
+Train loss - Segmentation: 4.20805e-01
+Ref loss: 4.20071e-03
+Ref loss - RGB: 4.20071e-03
+Ref loss - Segmentation: 4.30215e-01
+Mean outout: 0.16101
+
+
+==================================================
+Epoch: 700 / 1321
+Duration / Epoch: 1.617
+Train loss: 5.81209e-03
+Train loss - RGB: 5.81209e-03
+Train loss - Segmentation: 3.77830e-01
+Ref loss: 6.74463e-03
+Ref loss - RGB: 6.74463e-03
+Ref loss - Segmentation: 4.20858e-01
+Mean outout: 0.12347
+
+
+==================================================
+Epoch: 720 / 1321
+Duration / Epoch: 1.706
+Train loss: 5.98937e-03
+Train loss - RGB: 5.98937e-03
+Train loss - Segmentation: 4.37555e-01
+Ref loss: 6.61120e-03
+Ref loss - RGB: 6.61120e-03
+Ref loss - Segmentation: 4.31573e-01
+Mean outout: 0.19168
+
+
+==================================================
+Epoch: 740 / 1321
+Duration / Epoch: 1.667
+Train loss: 4.82392e-03
+Train loss - RGB: 4.82392e-03
+Train loss - Segmentation: 4.13418e-01
+Ref loss: 5.48486e-03
+Ref loss - RGB: 5.48486e-03
+Ref loss - Segmentation: 4.53616e-01
+Mean outout: 0.16869
+
+
+==================================================
+Epoch: 760 / 1321
+Duration / Epoch: 1.756
+Train loss: 4.45273e-03
+Train loss - RGB: 4.45273e-03
+Train loss - Segmentation: 3.93355e-01
+Ref loss: 5.45058e-03
+Ref loss - RGB: 5.45058e-03
+Ref loss - Segmentation: 4.26668e-01
+Mean outout: 0.12248
+
+
+==================================================
+Epoch: 780 / 1321
+Duration / Epoch: 1.757
+Train loss: 6.04325e-03
+Train loss - RGB: 6.04325e-03
+Train loss - Segmentation: 4.34828e-01
+Ref loss: 5.28158e-03
+Ref loss - RGB: 5.28158e-03
+Ref loss - Segmentation: 4.64733e-01
+Mean outout: 0.15493
+
+
+==================================================
+Epoch: 800 / 1321
+Duration / Epoch: 1.637
+Train loss: 4.76888e-03
+Train loss - RGB: 4.76888e-03
+Train loss - Segmentation: 4.14880e-01
+Ref loss: 4.23128e-03
+Ref loss - RGB: 4.23128e-03
+Ref loss - Segmentation: 4.33697e-01
+Mean outout: 0.14487
+
+
+==================================================
+Epoch: 820 / 1321
+Duration / Epoch: 1.765
+Train loss: 5.15213e-03
+Train loss - RGB: 5.15213e-03
+Train loss - Segmentation: 4.59919e-01
+Ref loss: 4.80927e-03
+Ref loss - RGB: 4.80927e-03
+Ref loss - Segmentation: 4.47031e-01
+Mean outout: 0.14292
+
+
+==================================================
+Epoch: 840 / 1321
+Duration / Epoch: 1.746
+Train loss: 5.47886e-03
+Train loss - RGB: 5.47886e-03
+Train loss - Segmentation: 4.34026e-01
+Ref loss: 4.60944e-03
+Ref loss - RGB: 4.60944e-03
+Ref loss - Segmentation: 4.33300e-01
+Mean outout: 0.15874
+
+
+==================================================
+Epoch: 860 / 1321
+Duration / Epoch: 1.788
+Train loss: 4.86098e-03
+Train loss - RGB: 4.86098e-03
+Train loss - Segmentation: 3.99495e-01
+Ref loss: 3.94413e-03
+Ref loss - RGB: 3.94413e-03
+Ref loss - Segmentation: 4.40894e-01
+Mean outout: 0.14043
+
+
+==================================================
+Epoch: 880 / 1321
+Duration / Epoch: 1.831
+Train loss: 5.55082e-03
+Train loss - RGB: 5.55082e-03
+Train loss - Segmentation: 4.31152e-01
+Ref loss: 4.99484e-03
+Ref loss - RGB: 4.99484e-03
+Ref loss - Segmentation: 4.33033e-01
+Mean outout: 0.21404
+
+
+==================================================
+Epoch: 900 / 1321
+Duration / Epoch: 1.796
+Train loss: 4.76539e-03
+Train loss - RGB: 4.76539e-03
+Train loss - Segmentation: 4.35672e-01
+Ref loss: 4.08385e-03
+Ref loss - RGB: 4.08385e-03
+Ref loss - Segmentation: 4.25642e-01
+Mean outout: 0.15218
+
+
+==================================================
+Epoch: 920 / 1321
+Duration / Epoch: 1.743
+Train loss: 5.11247e-03
+Train loss - RGB: 5.11247e-03
+Train loss - Segmentation: 4.35806e-01
+Ref loss: 4.70531e-03
+Ref loss - RGB: 4.70531e-03
+Ref loss - Segmentation: 4.44578e-01
+Mean outout: 0.17246
+
+
+==================================================
+Epoch: 940 / 1321
+Duration / Epoch: 1.775
+Train loss: 4.31853e-03
+Train loss - RGB: 4.31853e-03
+Train loss - Segmentation: 3.60297e-01
+Ref loss: 3.98439e-03
+Ref loss - RGB: 3.98439e-03
+Ref loss - Segmentation: 4.25107e-01
+Mean outout: 0.13186
+
+
+==================================================
+Epoch: 960 / 1321
+Duration / Epoch: 1.794
+Train loss: 2.95070e-03
+Train loss - RGB: 2.95070e-03
+Train loss - Segmentation: 3.08529e-01
+Ref loss: 3.28607e-03
+Ref loss - RGB: 3.28607e-03
+Ref loss - Segmentation: 4.54979e-01
+Mean outout: 0.12122
+
+
+==================================================
+Epoch: 980 / 1321
+Duration / Epoch: 1.808
+Train loss: 6.67433e-03
+Train loss - RGB: 6.67433e-03
+Train loss - Segmentation: 4.40417e-01
+Ref loss: 3.70774e-03
+Ref loss - RGB: 3.70774e-03
+Ref loss - Segmentation: 4.30431e-01
+Mean outout: 0.14082
+
+
+==================================================
+Epoch: 1000 / 1321
+Duration / Epoch: 1.700
+Train loss: 5.24549e-03
+Train loss - RGB: 5.24549e-03
+Train loss - Segmentation: 4.27116e-01
+Ref loss: 3.48604e-03
+Ref loss - RGB: 3.48604e-03
+Ref loss - Segmentation: 4.13410e-01
+Mean outout: 0.18321
+
+
+==================================================
+Epoch: 1020 / 1321
+Duration / Epoch: 1.815
+Train loss: 3.07670e-03
+Train loss - RGB: 3.07670e-03
+Train loss - Segmentation: 3.90322e-01
+Ref loss: 4.69405e-03
+Ref loss - RGB: 4.69405e-03
+Ref loss - Segmentation: 4.23309e-01
+Mean outout: 0.12180
+
+
+==================================================
+Epoch: 1040 / 1321
+Duration / Epoch: 1.790
+Train loss: 3.57487e-03
+Train loss - RGB: 3.57487e-03
+Train loss - Segmentation: 4.32243e-01
+Ref loss: 4.31713e-03
+Ref loss - RGB: 4.31713e-03
+Ref loss - Segmentation: 4.35873e-01
+Mean outout: 0.13689
+
+
+==================================================
+Epoch: 1060 / 1321
+Duration / Epoch: 1.622
+Train loss: 2.75909e-03
+Train loss - RGB: 2.75909e-03
+Train loss - Segmentation: 3.62074e-01
+Ref loss: 4.56247e-03
+Ref loss - RGB: 4.56247e-03
+Ref loss - Segmentation: 4.30013e-01
+Mean outout: 0.10480
+
+
+==================================================
+Epoch: 1080 / 1321
+Duration / Epoch: 1.738
+Train loss: 6.11598e-03
+Train loss - RGB: 6.11598e-03
+Train loss - Segmentation: 3.94616e-01
+Ref loss: 3.92237e-03
+Ref loss - RGB: 3.92237e-03
+Ref loss - Segmentation: 4.28115e-01
+Mean outout: 0.13291
+
+
+==================================================
+Epoch: 1100 / 1321
+Duration / Epoch: 1.743
+Train loss: 2.38306e-03
+Train loss - RGB: 2.38306e-03
+Train loss - Segmentation: 3.28369e-01
+Ref loss: 4.39594e-03
+Ref loss - RGB: 4.39594e-03
+Ref loss - Segmentation: 4.51669e-01
+Mean outout: 0.07141
+
+
+==================================================
+Epoch: 1120 / 1321
+Duration / Epoch: 1.707
+Train loss: 2.27685e-03
+Train loss - RGB: 2.27685e-03
+Train loss - Segmentation: 3.43765e-01
+Ref loss: 4.03452e-03
+Ref loss - RGB: 4.03452e-03
+Ref loss - Segmentation: 4.65744e-01
+Mean outout: 0.08058
+
+
+==================================================
+Epoch: 1140 / 1321
+Duration / Epoch: 1.720
+Train loss: 3.99592e-03
+Train loss - RGB: 3.99592e-03
+Train loss - Segmentation: 4.07114e-01
+Ref loss: 3.62872e-03
+Ref loss - RGB: 3.62872e-03
+Ref loss - Segmentation: 4.43216e-01
+Mean outout: 0.16358
+
+
+==================================================
+Epoch: 1160 / 1321
+Duration / Epoch: 1.767
+Train loss: 1.73651e-03
+Train loss - RGB: 1.73651e-03
+Train loss - Segmentation: 3.21055e-01
+Ref loss: 4.09453e-03
+Ref loss - RGB: 4.09453e-03
+Ref loss - Segmentation: 4.27361e-01
+Mean outout: 0.08457
+
+
+==================================================
+Epoch: 1180 / 1321
+Duration / Epoch: 1.791
+Train loss: 5.44914e-03
+Train loss - RGB: 5.44914e-03
+Train loss - Segmentation: 3.58169e-01
+Ref loss: 4.54088e-03
+Ref loss - RGB: 4.54088e-03
+Ref loss - Segmentation: 4.21047e-01
+Mean outout: 0.17028
+
+
+==================================================
+Epoch: 1200 / 1321
+Duration / Epoch: 1.805
+Train loss: 3.21265e-03
+Train loss - RGB: 3.21265e-03
+Train loss - Segmentation: 4.14162e-01
+Ref loss: 3.54303e-03
+Ref loss - RGB: 3.54303e-03
+Ref loss - Segmentation: 4.30767e-01
+Mean outout: 0.12364
+
+
+==================================================
+Epoch: 1220 / 1321
+Duration / Epoch: 1.638
+Train loss: 3.04911e-03
+Train loss - RGB: 3.04911e-03
+Train loss - Segmentation: 3.30982e-01
+Ref loss: 4.68925e-03
+Ref loss - RGB: 4.68925e-03
+Ref loss - Segmentation: 4.76493e-01
+Mean outout: 0.14754
+
+
+==================================================
+Epoch: 1240 / 1321
+Duration / Epoch: 1.602
+Train loss: 3.80808e-03
+Train loss - RGB: 3.80808e-03
+Train loss - Segmentation: 3.46559e-01
+Ref loss: 3.13255e-03
+Ref loss - RGB: 3.13255e-03
+Ref loss - Segmentation: 4.13757e-01
+Mean outout: 0.16765
+
+
+==================================================
+Epoch: 1260 / 1321
+Duration / Epoch: 1.642
+Train loss: 3.99218e-03
+Train loss - RGB: 3.99218e-03
+Train loss - Segmentation: 3.67472e-01
+Ref loss: 3.21724e-03
+Ref loss - RGB: 3.21724e-03
+Ref loss - Segmentation: 4.37924e-01
+Mean outout: 0.12347
+
+
+==================================================
+Epoch: 1280 / 1321
+Duration / Epoch: 1.612
+Train loss: 3.43992e-03
+Train loss - RGB: 3.43992e-03
+Train loss - Segmentation: 3.52757e-01
+Ref loss: 4.01971e-03
+Ref loss - RGB: 4.01971e-03
+Ref loss - Segmentation: 4.39100e-01
+Mean outout: 0.15078
+
+
+==================================================
+Epoch: 1300 / 1321
+Duration / Epoch: 1.556
+Train loss: 1.91501e-03
+Train loss - RGB: 1.91501e-03
+Train loss - Segmentation: 3.44034e-01
+Ref loss: 3.90019e-03
+Ref loss - RGB: 3.90019e-03
+Ref loss - Segmentation: 4.11374e-01
+Mean outout: 0.08139
+
+
+==================================================
+Epoch: 1320 / 1321
+Duration / Epoch: 1.652
+Train loss: 3.95800e-03
+Train loss - RGB: 3.95800e-03
+Train loss - Segmentation: 4.13296e-01
+Ref loss: 3.44232e-03
+Ref loss - RGB: 3.44232e-03
+Ref loss - Segmentation: 4.23791e-01
+Mean outout: 0.16948
+
